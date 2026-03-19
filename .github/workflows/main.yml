@@ -1,10 +1,13 @@
 name: actiondemo
+
 on: workflow_dispatch
+
 jobs:
   demo:
     runs-on: ubuntu-latest
     steps:
       - name: actiondemo
-        users: actions/checkout@v4
-      -  name: print index file
-      run: cat index.html
+        uses: actions/checkout@v4
+
+      - name: print index file
+        run: cat index.html
